@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria - TLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css?v=20260807-sem-identidade">
+</head>
+<body data-page="gallery" data-base-path="..">
+  <header class="site-header">
+    <div id="navbar-root"></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero mini reveal">
+      <div class="container">
+        <span class="section-tag">Galeria TLC</span>
+        <h1>Fotos e recordações do encontro</h1>
+        <p>Explore cada etapa do TLC por categoria e reviva momentos especiais da comunidade.</p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container">
+        <div class="filter-bar reveal" id="gallery-filters"></div>
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal hidden" id="gallery-modal">
+    <div class="modal-backdrop" data-close-modal="true"></div>
+    <div class="modal-card modal-post-card">
+      <div class="modal-post-header">
+        <div class="modal-post-header__main">
+          <div id="modal-author"></div>
+          <div class="modal-post-meta" id="modal-meta"></div>
+        </div>
+        <div class="modal-post-header__actions">
+          <button type="button" class="post-manage-button hidden" id="delete-photo-button">Apagar foto</button>
+          <button class="modal-close" id="close-modal" aria-label="Fechar modal">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-media-frame">
+        <button type="button" class="modal-nav-button modal-nav-button--prev" id="modal-prev-photo" aria-label="Ver foto anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <img id="modal-image" src="" alt="">
+        <button type="button" class="modal-nav-button modal-nav-button--next" id="modal-next-photo" aria-label="Ver próxima foto">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="modal-info modal-post-body">
+        <div class="photo-engagement-bar">
+          <div class="photo-engagement-actions">
+            <button type="button" class="engagement-button" id="like-photo-button">
+              <i class="fa-solid fa-heart"></i>
+              <span id="like-photo-label">Curtir</span>
+            </button>
+            <button type="button" class="engagement-button engagement-button--subtle" id="comment-jump-button">
+              <i class="fa-regular fa-comment"></i>
+              <span>Comentar</span>
+            </button>
+          </div>
+          <span class="engagement-count" id="like-photo-count">0 curtidas</span>
+        </div>
+
+        <div class="modal-caption-block">
+          <p class="modal-caption-text" id="modal-description"></p>
+          <p class="modal-caption-note" id="modal-title"></p>
+          <p class="modal-date" id="modal-date"></p>
+        </div>
+
+        <section class="comments-panel">
+          <div class="comments-heading">
+            <span class="section-tag">COMENTÁRIOS</span>
+          </div>
+          <div class="comments-list" id="comments-list"></div>
+          <form id="comment-form" class="comment-form">
+            <div class="input-group">
+              <label for="comment-text">Escreva um comentário</label>
+              <textarea id="comment-text" rows="3" placeholder="Compartilhe uma lembrança ou recado dessa foto"></textarea>
+              <small class="field-error" data-error-for="comment-text"></small>
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Comentar</button>
+            </div>
+            <div class="form-message" id="comment-message" aria-live="polite"></div>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-root"></div>
+
+  <script src="../js/script.js?v=20260807-sem-identidade"></script>
+</body>
+</html>

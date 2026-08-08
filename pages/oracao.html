@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mural de Oração - TLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css?v=20260807-sem-identidade">
+</head>
+<body data-page="prayer" data-base-path="..">
+  <header class="site-header">
+    <div id="navbar-root"></div>
+  </header>
+
+  <main class="page-shell">
+    <section class="page-hero mini reveal">
+      <div class="container">
+        <span class="section-tag">Mural de oração</span>
+        <h1>Entregue aqui seu pedido de oração</h1>
+        <p>Um espaço respeitoso para confiar intenções, agradecer e sustentar a caminhada do TLC em oração.</p>
+      </div>
+    </section>
+
+    <section class="section-pad">
+      <div class="container form-layout prayer-layout">
+        <form class="upload-form reveal" id="prayer-form" novalidate>
+          <div class="input-group">
+            <label for="prayer-name">Seu nome</label>
+            <input type="text" id="prayer-name" readonly>
+          </div>
+
+          <div class="input-group">
+            <label for="prayer-text">Pedido de oração</label>
+            <textarea id="prayer-text" rows="6" placeholder="Escreva aqui seu pedido com respeito e simplicidade."></textarea>
+            <small class="field-error" data-error-for="prayer-text"></small>
+          </div>
+
+          <label class="checkbox">
+            <input type="checkbox" id="prayer-anonymous">
+            <span>Enviar como pedido anônimo</span>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar pedido</button>
+          </div>
+
+          <div class="form-message" id="prayer-message" aria-live="polite"></div>
+        </form>
+
+        <section class="preview-panel reveal">
+          <div class="section-heading compact">
+            <span class="section-tag">Pedidos recentes</span>
+            <h2>Mural de oração</h2>
+            <p>Cada pedido aparece com delicadeza, mantendo o clima de acolhida do encontro.</p>
+          </div>
+          <div class="prayer-list" id="prayer-list"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="../js/script.js?v=20260807-sem-identidade"></script>
+</body>
+</html>

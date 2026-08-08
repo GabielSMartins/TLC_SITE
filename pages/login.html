@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entrar - TLC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="../css/style.css?v=20260807-sem-identidade">
+</head>
+<body data-page="login" data-base-path="..">
+  <header class="site-header">
+    <div id="navbar-root"></div>
+  </header>
+
+  <main class="auth-page">
+    <section class="auth-shell">
+      <div class="auth-backdrop"></div>
+      <div class="auth-card reveal">
+        <div class="auth-brand">
+          <div class="brand-mark large image-mark">
+            <img src="../images/logo-tlc-paraiso.jpg" alt="Logo TLC Paraíso">
+          </div>
+          <h1>Bem-vindo ao TLC</h1>
+          <p>Entre para acessar nossas recordações</p>
+        </div>
+
+        <form id="login-form" novalidate>
+          <div class="input-group">
+            <label for="full-name">Nome completo</label>
+            <input type="text" id="full-name" name="full-name" placeholder="Digite seu nome completo">
+            <small class="field-error" data-error-for="full-name"></small>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <div class="password-wrap">
+              <input type="password" id="password" name="password" placeholder="Digite sua senha">
+              <button type="button" class="password-toggle" id="password-toggle" aria-label="Mostrar ou esconder senha">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+            <small class="field-error" data-error-for="password"></small>
+          </div>
+
+          <div class="form-row">
+            <label class="checkbox">
+              <input type="checkbox" id="remember" name="remember">
+              <span>Lembrar de mim</span>
+            </label>
+            <a href="#" class="text-link" id="forgot-password-link">Esqueci minha senha</a>
+          </div>
+
+          <div class="form-message" id="login-message" aria-live="polite"></div>
+
+          <button type="submit" class="btn btn-primary btn-full">Entrar</button>
+          <button type="button" class="btn btn-secondary btn-full" id="guest-login">Entrar como visitante</button>
+        </form>
+
+        <section class="register-panel hidden" id="register-panel">
+          <div class="register-panel__header">
+            <h2>Criar novo cadastro</h2>
+            <p>Preencha os dados para pedir acesso. O administrativo do grupo pode aprovar ou negar sua entrada.</p>
+          </div>
+
+          <form id="register-form" novalidate>
+            <div class="input-group">
+              <label for="register-name">Nome completo</label>
+              <input type="text" id="register-name" name="register-name" placeholder="Digite seu nome completo">
+              <small class="field-error" data-error-for="register-name"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="register-email">Seu melhor e-mail</label>
+              <input type="email" id="register-email" name="register-email" placeholder="Digite seu e-mail">
+              <small class="field-error" data-error-for="register-email"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="register-group">Turma, equipe ou motivo do acesso</label>
+              <input type="text" id="register-group" name="register-group" placeholder="Ex.: Encontro 2026, Equipe, Participante">
+              <small class="field-error" data-error-for="register-group"></small>
+            </div>
+
+            <div class="input-group">
+              <label for="register-message">Mensagem para o administrativo</label>
+              <textarea id="register-message" name="register-message" rows="4" placeholder="Fale rapidinho quem você é e por que quer entrar"></textarea>
+              <small class="field-error" data-error-for="register-message"></small>
+            </div>
+
+            <div class="form-message" id="register-message-box" aria-live="polite"></div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Enviar pedido</button>
+              <button type="button" class="btn btn-secondary" id="close-register">Fechar cadastro</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="auth-footer">
+          <p>Sob a proteção de Nossa Senhora de Guadalupe.</p>
+          <p><a href="#criar-conta" class="text-link" id="register-link">Criar uma conta</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/script.js?v=20260807-sem-identidade"></script>
+</body>
+</html>
